@@ -45,3 +45,44 @@ function multiTable(number) {
 }
 
 console.log(multiTable(5))
+
+// Complete the function that receives as input a string, and produces outputs according to the following table:
+//
+//     Input	Output
+// "Jabroni"	"Patron Tequila"
+// "School Counselor"	"Anything with Alcohol"
+// "Programmer"	"Hipster Craft Beer"
+// "Bike Gang Member"	"Moonshine"
+// "Politician"	"Your tax dollars"
+// "Rapper"	"Cristal"
+// anything else	"Beer"
+// Note: anything else is the default case: if the input to the function is not any of the values in the table, then the return value should be "Beer".
+//
+//     Make sure you cover the cases where certain words do not show up with correct capitalization. For example, the input "pOLitiCIaN" should still return "Your tax dollars".
+
+function getDrinkByProfession(param) {
+    const table = {
+        "jabroni": "Patron Tequila",
+        "school counselor": "Anything with Alcohol",
+        "programmer": "Hipster Craft Beer",
+        "bike gang member": "Moonshine",
+        "politician": "Your tax dollars",
+        "rapper": "Cristal",
+    }
+    return table[param.toLowerCase()] ? table[param.toLowerCase()] : "Beer"
+}
+
+console.log(getDrinkByProfession("prsmmer"))
+
+// Given a string of arbitrary length with any ascii characters. Write a function to determine whether the string contains the whole word "English".
+//
+//     The order of characters is important -- a string "abcEnglishdef" is correct but "abcnEglishsef" is not correct.
+//
+//     Upper or lower case letter does not matter -- "eNglisH" is also correct.
+//
+//     Return value as boolean values, true for the string to contains "English", false for it does not.
+
+function spEng(sentence) {
+    const lowerStr = sentence.toLowerCase();
+    return lowerStr.includes("english");
+}
