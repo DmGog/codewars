@@ -10,3 +10,31 @@ function dutyFree(normPrice, discount, hol) {
 }
 
 console.log(dutyFree(12, 50, 1000))
+
+/*
+Find out whether the shape is a cube https://www.codewars.com/kata/58d248c7012397a81800005c*/
+
+function cubeChecker(volume, side) {
+
+    return side > 0 ? side ** 3 === volume : false
+};
+
+console.log(cubeChecker(-8, -2))
+
+/*
+How old will I be in 2099? https://www.codewars.com/kata/5761a717780f8950ce001473/train/javascript*/
+
+function calculateAge(yearOfBirth, yearToCheck) {
+    const ageDifference = yearToCheck - yearOfBirth;
+
+    if (ageDifference < 0) {
+        const yearsUntilBorn = Math.abs(ageDifference);
+        return `You will be born in ${yearsUntilBorn} year${yearsUntilBorn === 1 ? '' : 's'}.`;
+    } else if (ageDifference > 0) {
+        return `You are ${ageDifference} year${ageDifference === 1 ? '' : 's'} old.`;
+    } else {
+        return `You were born this very year!`;
+    }
+}
+
+console.log(calculateAge(2011, 2012))
