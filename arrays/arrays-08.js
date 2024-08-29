@@ -64,3 +64,16 @@ function arrayMadness(a, b) {
 }
 
 console.log(arrayMadness([4, 5, 6], [1, 2, 3]))
+
+// Sum of differences in array https://www.codewars.com/kata/5b73fe9fb3d9776fbf00009e/train/javascript
+
+function sumOfDifferences(arr) {
+    const sortedArr = arr.sort((a, b) => b - a);
+    let sum = 0;
+    for (let i = 0; i < sortedArr.length - 1; i++) {
+        sum += sortedArr[i] - sortedArr[i + 1];
+    }
+    return sum;
+}
+
+console.log(sumOfDifferences([1, 2, 10]))

@@ -29,12 +29,22 @@ function calculateAge(yearOfBirth, yearToCheck) {
 
     if (ageDifference < 0) {
         const yearsUntilBorn = Math.abs(ageDifference);
-        return `You will be born in ${yearsUntilBorn} year${yearsUntilBorn === 1 ? '' : 's'}.`;
+        return `You will be born in ${yearsUntilBorn} year${yearsUntilBorn === 1 ? "" : "s"}.`;
     } else if (ageDifference > 0) {
-        return `You are ${ageDifference} year${ageDifference === 1 ? '' : 's'} old.`;
+        return `You are ${ageDifference} year${ageDifference === 1 ? "" : "s"} old.`;
     } else {
         return `You were born this very year!`;
     }
 }
 
 console.log(calculateAge(2011, 2012))
+
+// Take the Derivative https://www.codewars.com/kata/5963c18ecb97be020b0000a2/train/javascript
+
+function derive(coefficient, exponent) {
+    if (exponent !== 1) {
+      return  `${coefficient * exponent}x^${exponent - 1}`
+    } else { return `${coefficient * exponent}x^${exponent}`}
+}
+
+console.log(derive(7, 8))

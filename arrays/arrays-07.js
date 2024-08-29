@@ -37,3 +37,18 @@ function breakChocolate(n, m) {
 }
 
 console.log(breakChocolate(5, 5))
+
+// Find the capitals https://www.codewars.com/kata/539ee3b6757843632d00026b/train/javascript
+
+const capitals = function (word) {
+    // Write your code here
+    let c = []
+    for (let i = 0; i < word.length; i++) {
+        if(word[i] === word[i].toUpperCase()) {
+            c.push(i);
+        }
+    }
+    return c
+};
+
+console.log(capitals('CodEWaRs'))
