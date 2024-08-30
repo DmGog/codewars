@@ -43,8 +43,17 @@ console.log(calculateAge(2011, 2012))
 
 function derive(coefficient, exponent) {
     if (exponent !== 1) {
-      return  `${coefficient * exponent}x^${exponent - 1}`
-    } else { return `${coefficient * exponent}x^${exponent}`}
+        return `${coefficient * exponent}x^${exponent - 1}`
+    } else {
+        return `${coefficient * exponent}x^${exponent}`
+    }
 }
 
 console.log(derive(7, 8))
+
+
+// Is this a triangle? https://www.codewars.com/kata/56606694ec01347ce800001b/train/javascript
+
+function isTriangle(a, b, c) {
+    return (a + b > c) && (a + c > b) && (b + c > a)
+}
