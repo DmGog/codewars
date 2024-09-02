@@ -44,9 +44,10 @@ function high(x) {
         }
         return score;
     }
-    const words = x.split(' ');
+
+    const words = x.split(" ");
     let highestScore = 0;
-    let highestScoringWord = '';
+    let highestScoringWord = "";
 
     for (const word of words) {
         const score = calculateWordScore(word);
@@ -60,3 +61,24 @@ function high(x) {
 }
 
 console.log(high("man i need a taxi up to ubud"))
+
+// Is a number prime? https://www.codewars.com/kata/5262119038c0985a5b00029f/train/javascript
+function isPrime(num) {
+    if (num < 2) {
+        return false
+    }
+    if (num === 2) {
+        return true
+    }
+    if (num % 2 === 0) {
+        return false;
+    }
+    for (let i = 3; i <= Math.sqrt(num); i += 2) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(isPrime(4))

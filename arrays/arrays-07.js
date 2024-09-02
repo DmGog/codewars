@@ -44,11 +44,21 @@ const capitals = function (word) {
     // Write your code here
     let c = []
     for (let i = 0; i < word.length; i++) {
-        if(word[i] === word[i].toUpperCase()) {
+        if (word[i] === word[i].toUpperCase()) {
             c.push(i);
         }
     }
     return c
 };
 
-console.log(capitals('CodEWaRs'))
+console.log(capitals("CodEWaRs"))
+
+// Find the middle element https://www.codewars.com/kata/545a4c5a61aa4c6916000755/train/javascript
+function gimme(triplet) {
+    let res = [...triplet]
+    let c = triplet.sort((a, b) => a - b)
+    let b = c[1]
+    return res.indexOf(b)
+}
+
+console.log(gimme([5, 10, 14]))

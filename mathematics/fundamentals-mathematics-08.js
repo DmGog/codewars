@@ -15,7 +15,6 @@ console.log(dutyFree(12, 50, 1000))
 Find out whether the shape is a cube https://www.codewars.com/kata/58d248c7012397a81800005c*/
 
 function cubeChecker(volume, side) {
-
     return side > 0 ? side ** 3 === volume : false
 };
 
