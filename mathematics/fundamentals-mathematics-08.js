@@ -16,7 +16,7 @@ Find out whether the shape is a cube https://www.codewars.com/kata/58d248c701239
 
 function cubeChecker(volume, side) {
     return side > 0 ? side ** 3 === volume : false
-};
+}
 
 console.log(cubeChecker(-8, -2))
 
@@ -56,3 +56,16 @@ console.log(derive(7, 8))
 function isTriangle(a, b, c) {
     return (a + b > c) && (a + c > b) && (b + c > a)
 }
+
+console.log(isTriangle(1, 2, 3))
+
+
+// let obj = {
+//     get a() {
+//         return this._a++;
+//     },
+//     _a: 1,
+// }
+// if (obj.a === 1 && obj.a === 2 && obj.a === 3) {
+//     console.log("bingo")
+// }
