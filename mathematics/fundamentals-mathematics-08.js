@@ -69,3 +69,35 @@ console.log(isTriangle(1, 2, 3))
 // if (obj.a === 1 && obj.a === 2 && obj.a === 3) {
 //     console.log("bingo")
 // }
+
+
+// Training JS #5: Basic data types--Object https://www.codewars.com/kata/571f1eb77e8954a812000837/train/javascript
+
+function animal(obj) {
+
+    return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
+}
+
+console.log(animal({name: "dog", legs: 4, color: "white"}))
+
+function formatMoney(amount) {
+    // your formatting code here
+    return `$${amount.toFixed(2)}`
+}
+
+console.log(formatMoney(39.99))
+
+// Sum of Multiples https://www.codewars.com/kata/57241e0f440cd279b5000829/train/javascript
+
+function sumMul(n, m) {
+    if (m <= n) {
+        return "INVALID"
+    }
+    let res = 0
+    for (let i = n; i < m; i = i + n) {
+        res += i
+    }
+    return res
+}
+
+console.log(sumMul(2, 9))
