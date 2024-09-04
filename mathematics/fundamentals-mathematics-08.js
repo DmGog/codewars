@@ -101,3 +101,11 @@ function sumMul(n, m) {
 }
 
 console.log(sumMul(2, 9))
+
+// 5 without numbers !!https://www.codewars.com/kata/59441520102eaa25260000bf/train/javascript
+function unusualFive() {
+    let res = "apple"
+    return res.length
+}
+
+console.log(unusualFive())

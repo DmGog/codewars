@@ -62,3 +62,15 @@ function gimme(triplet) {
 }
 
 console.log(gimme([5, 10, 14]))
+
+
+// Don't give me five! https://www.codewars.com/kata/5813d19765d81c592200001a/train/javascript
+function dontGiveMeFive(start, end) {
+    let res = []
+    for (let i = start; i <= end; i++) {
+        res.push(i)
+    }
+    return res.filter(e => !String(e).includes('5')).length
+}
+
+console.log(dontGiveMeFive(4, 17))
