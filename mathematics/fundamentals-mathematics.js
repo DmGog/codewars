@@ -109,3 +109,29 @@ function unusualFive() {
 }
 
 console.log(unusualFive())
+
+
+// Regular Ball Super Ball https://www.codewars.com/kata/53f0f358b9cb376eca001079/train/javascript
+var Ball = function (ballType = "regular") {
+    // your code goes here
+    this.ballType = ballType
+};
+
+const ball1 = new Ball()
+const ball2 = new Ball("super")
+console.log(ball1)
+console.log(ball2)
+
+// Growth of a Population https://www.codewars.com/kata/563b662a59afc2b5120000c6/train/javascript
+function nbYear(p0, percent, aug, p) {
+    // your code
+    let currentPopulation = p0;
+    let years = 0;
+    while (currentPopulation < p) {
+        currentPopulation += Math.floor(currentPopulation * percent / 100 + aug)
+        years = years + 1
+    }
+    return years
+}
+
+console.log(nbYear(1500, 5, 100, 5000))
