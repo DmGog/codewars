@@ -137,16 +137,16 @@ function nbYear(p0, percent, aug, p) {
 console.log(nbYear(1500, 5, 100, 5000))
 
 // Exclamation marks series #11: Replace all vowel to exclamation mark in the sentence https://www.codewars.com/kata/57fb09ef2b5314a8a90001ed/train/javascript
-function replace(s){
+function replace(s) {
     //coding and coding....
-    return s.replace(/[aeiou]/gi,'!')
+    return s.replace(/[aeiou]/gi, "!")
 
 }
 
 console.log(replace("Hi!"))
 
 // Check same case https://www.codewars.com/kata/5dd462a573ee6d0014ce715b/train/javascript
-function sameCase(a, b){
+function sameCase(a, b) {
     if (!isNaN(a) || !isNaN(b) || !/[a-zA-Z]/.test(a) || !/[a-zA-Z]/.test(b)) {
         return -1;
     }
@@ -158,3 +158,14 @@ function sameCase(a, b){
         return 0;
     }
 }
+
+// Remove First and Last Character Part Two https://www.codewars.com/kata/570597e258b58f6edc00230d/train/javascript
+
+function array(string) {
+    if (string.split(",").length < 3) {
+        return null;
+    }
+    return string.split(",").slice(1, -1).join(" ")
+}
+
+console.log(array('A1,B2,C3,D4,E5'))
