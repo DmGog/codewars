@@ -168,4 +168,14 @@ function array(string) {
     return string.split(",").slice(1, -1).join(" ")
 }
 
-console.log(array('A1,B2,C3,D4,E5'))
+console.log(array("A1,B2,C3,D4,E5"))
+
+// Find the Remainder https://www.codewars.com/kata/524f5125ad9c12894e00003f/train/javascript
+
+function remainder(n, m) {
+    // Divide the larger argument by the smaller argument and return the remainder
+
+    return n > m ? n % m : m % n
+}
+
+console.log(remainder(13, 72))
