@@ -90,24 +90,25 @@ console.log(printArray(["h", "o", "l", "a"]))
 // Enumerable Magic #25 - Take the First N Elements https://www.codewars.com/kata/545afd0761aa4c3055001386/train/javascript
 function take(arr, n) {
     // Your code here
-    return arr.slice(0,n)
+    return arr.slice(0, n)
 }
 
 console.log(take([0, 1, 2, 3, 5, 8, 13], 3))
 
 // Enumerable Magic - Does My List Include This? https://www.codewars.com/kata/545991b4cbae2a5fda000158/train/javascript
 
-function include(arr, item){
-return arr.includes(item)
+function include(arr, item) {
+    return arr.includes(item)
 }
 
-console.log(include([1,2,3,4], 3))
+console.log(include([1, 2, 3, 4], 3))
 
 // How many stairs will Suzuki climb in 20 years? https://www.codewars.com/kata/56fc55cd1f5a93d68a001d4e/train/javascript
-function stairsIn20(s){
+function stairsIn20(s) {
     //your code here
-    return s.map(e=>e.reduce((a,b) => a + b, 0)).reduce((a,b) => a + b, 0)*20
+    return s.map(e => e.reduce((a, b) => a + b, 0)).reduce((a, b) => a + b, 0) * 20
 }
+
 let a = [
     [
         6737, 7244, 5776, 9826, 7057, 9247, 5842,
@@ -181,3 +182,15 @@ let a = [
     ]
 ]
 console.log(stairsIn20(a))
+
+// Find the Difference in Age between Oldest and Youngest Family Members https://www.codewars.com/kata/5720a1cb65a504fdff0003e2/train/javascript
+function differenceInAges(ages) {
+    let result = []
+    let res = ages.sort((a, b) => a - b);
+    result.push(res[0]);
+    result.push(res[res.length - 1]);
+    result.push(result[1] - result[0])
+    return result
+}
+
+console.log(differenceInAges([82, 15, 6, 38, 35]))
