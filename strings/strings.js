@@ -7,11 +7,11 @@ Create a method that takes as input a name, city, and state to welcome a person.
 
 ['John', 'Smith'], 'Phoenix', 'Arizona'
 This example will return the string Hello, John Smith! Welcome to Phoenix, Arizona!*/
-function sayHello(name, city, state) {
+/*function sayHello(name, city, state) {
     return `Hello, ${name.join(" ")}! Welcome to ${city}, ${state}!`
 }
 
-console.log(sayHello(["Wallace", "Russel", "Osbourne"], "Albany", "New York"))
+console.log(sayHello(["Wallace", "Russel", "Osbourne"], "Albany", "New York"))*/
 
 
 // Your goal is to return multiplication table for number that is always an integer from 1 to 10.
@@ -32,7 +32,7 @@ console.log(sayHello(["Wallace", "Russel", "Osbourne"], "Albany", "New York"))
 //
 //     Note: newlines should be added between rows, but there should be no trailing newline at the end. If you're unsure about the format, look at the sample tests.
 
-function multiTable(number) {
+/*function multiTable(number) {
     let table = "";
     for (let i = 1; i <= 10; i++) {
         table += `${i} * ${number} = ${i * number}`;
@@ -44,7 +44,7 @@ function multiTable(number) {
 
 }
 
-console.log(multiTable(5))
+console.log(multiTable(5))*/
 
 // Complete the function that receives as input a string, and produces outputs according to the following table:
 //
@@ -60,7 +60,7 @@ console.log(multiTable(5))
 //
 //     Make sure you cover the cases where certain words do not show up with correct capitalization. For example, the input "pOLitiCIaN" should still return "Your tax dollars".
 
-function getDrinkByProfession(param) {
+/*function getDrinkByProfession(param) {
     const table = {
         "jabroni": "Patron Tequila",
         "school counselor": "Anything with Alcohol",
@@ -72,7 +72,7 @@ function getDrinkByProfession(param) {
     return table[param.toLowerCase()] ? table[param.toLowerCase()] : "Beer"
 }
 
-console.log(getDrinkByProfession("prsmmer"))
+console.log(getDrinkByProfession("prsmmer"))*/
 
 // Given a string of arbitrary length with any ascii characters. Write a function to determine whether the string contains the whole word "English".
 //
@@ -82,14 +82,14 @@ console.log(getDrinkByProfession("prsmmer"))
 //
 //     Return value as boolean values, true for the string to contains "English", false for it does not.
 
-function spEng(sentence) {
+/*function spEng(sentence) {
     const lowerStr = sentence.toLowerCase();
     return lowerStr.includes("english");
-}
+}*/
 
 // Triple Trouble https://www.codewars.com/kata/5704aea738428f4d30000914/train/javascript
 
-function tripleTrouble(one, two, three) {
+/*function tripleTrouble(one, two, three) {
     //Solution
     let res = ""
     for (let i = 0; i < one.length; i++) {
@@ -98,13 +98,33 @@ function tripleTrouble(one, two, three) {
     return res
 }
 
-console.log(tripleTrouble("aaa", "bbb", "ccc"))
+console.log(tripleTrouble("aaa", "bbb", "ccc"))*/
 
 // No Loops 2 - You only need one https://www.codewars.com/kata/57cc40b2f8392dbf2a0003ce/train/javascript
-function check(a, x) {
+/*function check(a, x) {
 
     return a.find((e) => e === x) === x
 };
 
-console.log(check(["what", "a", "great", "kata"], "kat"))
+console.log(check(["what", "a", "great", "kata"], "kat"))*/
 
+// Which are in? https://www.codewars.com/kata/550554fd08b86f84fe000a58/train/javascript
+
+
+const a1 = ["live", "strong", "lyal", "lysh", "arp"]
+
+const a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
+
+function inArray(array1, array2) {
+    let res = new Set()
+    for (let i = 0; i < array1.length; i++) {
+        for (let j = 0; j < array2.length; j++) {
+            if (array2[j].includes(array1[i])) {
+                res.add(array1[i])
+            }
+        }
+    }
+    return Array.from(res).sort()
+}
+
+console.log(inArray(a1, a2))
