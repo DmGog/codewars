@@ -7,7 +7,7 @@
 //     [12, 10, 8, 12, 7, 6, 4, 10, 12, 10]          -->  12
 //     [12, 10, 8, 8, 3, 3, 3, 3, 2, 4, 10, 12, 10]  -->   3
 
-function highestRank(arr) {
+/*function highestRank(arr) {
     const frequencyMap = {};
 
     // Подсчет частоты каждого числа
@@ -32,11 +32,11 @@ function highestRank(arr) {
     return mostFrequentNum;
 }
 
-console.log(highestRank([12, 10, 8, 12, 7, 6, 4, 10, 12]))
+console.log(highestRank([12, 10, 8, 12, 7, 6, 4, 10, 12]))*/
 
 // Highest Scoring Word https://www.codewars.com/kata/57eb8fcdf670e99d9b000272/train/javascript
 
-function high(x) {
+/*function high(x) {
     function calculateWordScore(word) {
         let score = 0;
         for (let i = 0; i < word.length; i++) {
@@ -60,9 +60,10 @@ function high(x) {
     return highestScoringWord;
 }
 
-console.log(high("man i need a taxi up to ubud"))
+console.log(high("man i need a taxi up to ubud"))*/
 
 // Is a number prime? https://www.codewars.com/kata/5262119038c0985a5b00029f/train/javascript
+/*
 function isPrime(num) {
     if (num < 2) {
         return false
@@ -81,4 +82,21 @@ function isPrime(num) {
     return true;
 }
 
-console.log(isPrime(4))
+console.log(isPrime(4))*/
+
+// Equal Sides Of An Array https://www.codewars.com/kata/5679aa472b8f57fb8c000047/train/javascript
+/*
+function findEvenIndex(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr.slice(0, i).reduce((a, b) => {
+            return a + b
+        },0) === arr.slice(i + 1).reduce((a, b) => {
+            return a + b
+        },0)) {
+            return i
+        }
+    }
+    return -1
+}
+
+console.log(findEvenIndex([20,10,30,10,10,15,35]))*/
