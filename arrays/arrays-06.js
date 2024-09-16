@@ -100,3 +100,30 @@ function findEvenIndex(arr) {
 }
 
 console.log(findEvenIndex([20,10,30,10,10,15,35]))*/
+
+
+// Valid Braces https://www.codewars.com/kata/5277c8a221e209d3f6000b56/train/javascript
+
+function validBraces(braces){
+    const stack = [];
+    const brackets = {
+        '(': ')',
+        '{': '}',
+        '[': ']'
+    };
+    for (let char of braces) {
+        if (brackets[char]) {
+            // Если это открывающая скобка, добавляем её в стек
+            stack.push(char);
+        } else if (Object.values(brackets).includes(char)) {
+            // Если это закрывающая скобка, проверяем стек
+            if (stack.length === 0 || brackets[stack.pop()] !== char) {
+                return false; // Неправильная последовательность
+            }
+        }
+    }
+    // Если стек пуст, скобки сбалансированы
+    return stack.length === 0;
+}
+
+console.log(validBraces("(({{[[]]}}))"))
