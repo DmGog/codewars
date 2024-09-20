@@ -186,3 +186,22 @@ console.log(array("A1,B2,C3,D4,E5"))*/
 
 console.log(remainder(13, 72))*/
 
+// Write Number in Expanded Form https://www.codewars.com/kata/5842df8ccbd22792a4000245/train/javascript
+
+function expandedForm(num) {
+
+    const digits = num.toString().split('');
+    const length = digits.length;
+    const expandedParts = [];
+    for (let i = 0; i < length; i++) {
+        const currentDigit = digits[i];
+        if (currentDigit !== '0') {
+            const placeValue = currentDigit * Math.pow(10, length - i - 1);
+            expandedParts.push(placeValue);
+        }
+    }
+
+    return expandedParts.join(' + ');
+}
+
+console.log(expandedForm(70304))
