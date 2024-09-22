@@ -104,26 +104,42 @@ console.log(findEvenIndex([20,10,30,10,10,15,35]))*/
 
 // Valid Braces https://www.codewars.com/kata/5277c8a221e209d3f6000b56/train/javascript
 
-function validBraces(braces){
-    const stack = [];
-    const brackets = {
-        '(': ')',
-        '{': '}',
-        '[': ']'
-    };
-    for (let char of braces) {
-        if (brackets[char]) {
-            // Если это открывающая скобка, добавляем её в стек
-            stack.push(char);
-        } else if (Object.values(brackets).includes(char)) {
-            // Если это закрывающая скобка, проверяем стек
-            if (stack.length === 0 || brackets[stack.pop()] !== char) {
-                return false; // Неправильная последовательность
-            }
+// function validBraces(braces){
+//     const stack = [];
+//     const brackets = {
+//         '(': ')',
+//         '{': '}',
+//         '[': ']'
+//     };
+//     for (let char of braces) {
+//         if (brackets[char]) {
+//             // Если это открывающая скобка, добавляем её в стек
+//             stack.push(char);
+//         } else if (Object.values(brackets).includes(char)) {
+//             // Если это закрывающая скобка, проверяем стек
+//             if (stack.length === 0 || brackets[stack.pop()] !== char) {
+//                 return false; // Неправильная последовательность
+//             }
+//         }
+//     }
+//     // Если стек пуст, скобки сбалансированы
+//     return stack.length === 0;
+// }
+//
+// console.log(validBraces("(({{[[]]}}))"))
+
+// Mexican Wave https://www.codewars.com/kata/58f5c63f1e26ecda7e000029/train/javascript
+
+function wave(str){
+    // Code here
+    let res = []
+    for(let i = 0; i < str.length; i++){
+        if (str[i] !== ' ') {
+            let waveStr = str.slice(0, i) + str[i].toUpperCase() + str.slice(i + 1);
+            res.push(waveStr);
         }
     }
-    // Если стек пуст, скобки сбалансированы
-    return stack.length === 0;
+return res
 }
 
-console.log(validBraces("(({{[[]]}}))"))
+console.log(wave("Two words"))
