@@ -130,16 +130,16 @@ console.log(findEvenIndex([20,10,30,10,10,15,35]))*/
 
 // Mexican Wave https://www.codewars.com/kata/58f5c63f1e26ecda7e000029/train/javascript
 
-function wave(str){
-    // Code here
-    let res = []
-    for(let i = 0; i < str.length; i++){
-        if (str[i] !== ' ') {
-            let waveStr = str.slice(0, i) + str[i].toUpperCase() + str.slice(i + 1);
-            res.push(waveStr);
-        }
-    }
-return res
-}
-
-console.log(wave("Two words"))
+// function wave(str){
+//     // Code here
+//     let res = []
+//     for(let i = 0; i < str.length; i++){
+//         if (str[i] !== ' ') {
+//             let waveStr = str.slice(0, i) + str[i].toUpperCase() + str.slice(i + 1);
+//             res.push(waveStr);
+//         }
+//     }
+// return res
+// }
+//
+// console.log(wave("Two words"))

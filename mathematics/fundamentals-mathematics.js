@@ -188,20 +188,37 @@ console.log(remainder(13, 72))*/
 
 // Write Number in Expanded Form https://www.codewars.com/kata/5842df8ccbd22792a4000245/train/javascript
 
-function expandedForm(num) {
+// function expandedForm(num) {
+//
+//     const digits = num.toString().split('');
+//     const length = digits.length;
+//     const expandedParts = [];
+//     for (let i = 0; i < length; i++) {
+//         const currentDigit = digits[i];
+//         if (currentDigit !== '0') {
+//             const placeValue = currentDigit * Math.pow(10, length - i - 1);
+//             expandedParts.push(placeValue);
+//         }
+//     }
+//
+//     return expandedParts.join(' + ');
+// }
+//
+// console.log(expandedForm(70304))
 
-    const digits = num.toString().split('');
-    const length = digits.length;
-    const expandedParts = [];
-    for (let i = 0; i < length; i++) {
-        const currentDigit = digits[i];
-        if (currentDigit !== '0') {
-            const placeValue = currentDigit * Math.pow(10, length - i - 1);
-            expandedParts.push(placeValue);
-        }
-    }
 
-    return expandedParts.join(' + ');
+// Are they the "same" ? https ://www.codewars.com/kata/550498447451fbbd7600041c/train/javascript
+
+
+function comp(array1, array2) {
+    //your code here
+    if (array1 === null || array2 === null) return false
+    let array1Sort = array1.sort((a, b) => a - b).map(e => e * e)
+    let array2Sort = array2.sort((a, b) => a - b)
+
+
+    return JSON.stringify(array1Sort) === JSON.stringify(array2Sort)
 }
 
-console.log(expandedForm(70304))
+console.log(comp([121, 144, 19, 161, 19, 144, 19, 11],
+    [121, 14641, 20736, 361, 25921, 361, 20736, 361]))
