@@ -111,20 +111,34 @@ console.log(check(["what", "a", "great", "kata"], "kat"))*/
 // Which are in? https://www.codewars.com/kata/550554fd08b86f84fe000a58/train/javascript
 
 
-const a1 = ["live", "strong", "lyal", "lysh", "arp"]
+// const a1 = ["live", "strong", "lyal", "lysh", "arp"]
+//
+// const a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
+//
+// function inArray(array1, array2) {
+//     let res = new Set()
+//     for (let i = 0; i < array1.length; i++) {
+//         for (let j = 0; j < array2.length; j++) {
+//             if (array2[j].includes(array1[i])) {
+//                 res.add(array1[i])
+//             }
+//         }
+//     }
+//     return Array.from(res).sort()
+// }
+//
+// console.log(inArray(a1, a2))
 
-const a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
+// googlePosition  https://www.codewars.com/kata/52efefcbcdf57161d4000091/train/javascript
 
-function inArray(array1, array2) {
-    let res = new Set()
-    for (let i = 0; i < array1.length; i++) {
-        for (let j = 0; j < array2.length; j++) {
-            if (array2[j].includes(array1[i])) {
-                res.add(array1[i])
-            }
-        }
-    }
-    return Array.from(res).sort()
-}
 
-console.log(inArray(a1, a2))
+// function count(string) {
+//     let res = {}
+//     if(string==="") return res
+//     for (let i = 0; i < string.length; i++) {
+//         res[string.charAt(i)] = string.split('').filter(char => char === string.charAt(i)).length;
+//     }
+//     return res;
+// }
+//
+// console.log(count('aba')) /* {'a': 2, 'b': 1}*/
