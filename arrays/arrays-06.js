@@ -143,3 +143,19 @@ console.log(findEvenIndex([20,10,30,10,10,15,35]))*/
 // }
 //
 // console.log(wave("Two words"))
+
+// Two Sum https://www.codewars.com/kata/52c31f8e6605bcc646000082/train/javascript
+
+// function twoSum(numbers, target) {
+//     let res = []
+//     for (let i = 0; i < numbers.length; i++) {
+//         for (let j = i + 1; j < numbers.length; j++) {
+//             if (numbers[i] + numbers[j] === target) {
+//                 res.push(i,j);
+//             }
+//         }
+//     }
+//     return res;
+// }
+//
+// console.log(twoSum([1, 2, 3], 4)) // returns [0, 2] or [2, 0]
