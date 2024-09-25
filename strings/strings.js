@@ -142,3 +142,11 @@ console.log(check(["what", "a", "great", "kata"], "kat"))*/
 // }
 //
 // console.log(count('aba')) /* {'a': 2, 'b': 1}*/
+
+// CamelCase Method https://www.codewars.com/kata/587731fda577b3d1b0001196/train/javascript
+
+String.prototype.camelCase=function(){
+    return this.split(' ').map(e=>e.charAt(0).toUpperCase() + e.slice(1).toLowerCase()).join("")
+}
+
+console.log(metod("camel Case method"))
