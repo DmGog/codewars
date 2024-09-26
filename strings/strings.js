@@ -145,8 +145,17 @@ console.log(check(["what", "a", "great", "kata"], "kat"))*/
 
 // CamelCase Method https://www.codewars.com/kata/587731fda577b3d1b0001196/train/javascript
 
-String.prototype.camelCase=function(){
-    return this.split(' ').map(e=>e.charAt(0).toUpperCase() + e.slice(1).toLowerCase()).join("")
+// String.prototype.camelCase=function(){
+//     return this.split(' ').map(e=>e.charAt(0).toUpperCase() + e.slice(1).toLowerCase()).join("")
+// }
+//
+// console.log(metod("camel Case method"))
+
+// Reverse every other word in the string https://www.codewars.com/kata/58d76854024c72c3e20000de/train/javascript
+
+/*function reverse(str) {
+    return str.trim().split(" ").map((e, i) => i % 2 === 0 ? e : e.split("").reverse().join("")).join(" ");
 }
 
-console.log(metod("camel Case method"))
+console.log(reverse("Reverse this string, please!"))*/
+
