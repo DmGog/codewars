@@ -159,3 +159,23 @@ console.log(findEvenIndex([20,10,30,10,10,15,35]))*/
 // }
 //
 // console.log(twoSum([1, 2, 3], 4)) // returns [0, 2] or [2, 0]
+
+// Pyramid Array https://www.codewars.com/kata/515f51d438015969f7000013/train/javascript
+
+function pyramid(n) {
+    let res = []
+    if (n <= 0) {
+        return res
+    }
+    for (let i = 1; i <= n; i++) {
+        let res2 = [];
+        for (let j = 0; j < i; j++) {
+            res2.push(1);
+        }
+        res.push(res2)
+    }
+    return res
+    // your code here
+}
+
+console.log(pyramid(3)) //[[1], [1, 1], [1, 1, 1]]

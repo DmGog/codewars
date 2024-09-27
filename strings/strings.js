@@ -159,3 +159,10 @@ console.log(check(["what", "a", "great", "kata"], "kat"))*/
 
 console.log(reverse("Reverse this string, please!"))*/
 
+// WeIrD StRiNg CaSe https://www.codewars.com/kata/52b757663a95b11b3d00062d/train/javascript
+
+function toWeirdCase(string) {
+    return string.trim().split(" ").map((e) => e.split("").map((el, i) => i % 2 === 0 ? el.toUpperCase() : el.toLowerCase()).join("")).join(" ")
+}
+
+console.log(toWeirdCase("UPPER CASE")) //UpPeR CaSe
