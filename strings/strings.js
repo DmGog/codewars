@@ -161,8 +161,23 @@ console.log(reverse("Reverse this string, please!"))*/
 
 // WeIrD StRiNg CaSe https://www.codewars.com/kata/52b757663a95b11b3d00062d/train/javascript
 
-function toWeirdCase(string) {
+/*function toWeirdCase(string) {
     return string.trim().split(" ").map((e) => e.split("").map((el, i) => i % 2 === 0 ? el.toUpperCase() : el.toLowerCase()).join("")).join(" ")
 }
 
-console.log(toWeirdCase("UPPER CASE")) //UpPeR CaSe
+console.log(toWeirdCase("UPPER CASE")) //UpPeR CaSe*/
+
+// Title Case  https://www.codewars.com/kata/5202ef17a402dd033c000009/train/javascript
+function titleCase(title, minorWords) {
+    let res1 = title.toLowerCase().split(" ");
+    let res2 = minorWords ? minorWords.toLowerCase().split(" ") : [];
+
+    for (let i = 0; i < res1.length; i++) {
+        if (i === 0 || !res2.includes(res1[i])) {
+            res1[i] = res1[i].charAt(0).toUpperCase() + res1[i].slice(1);
+        }
+    }
+    return res1.join(" ");
+}
+
+console.log(titleCase("a clash of KINGS", "a an the of")) //'A Clash of Kings'
