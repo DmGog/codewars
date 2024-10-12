@@ -162,20 +162,46 @@ console.log(findEvenIndex([20,10,30,10,10,15,35]))*/
 
 // Pyramid Array https://www.codewars.com/kata/515f51d438015969f7000013/train/javascript
 
-function pyramid(n) {
-    let res = []
-    if (n <= 0) {
-        return res
+// function pyramid(n) {
+//     let res = []
+//     if (n <= 0) {
+//         return res
+//     }
+//     for (let i = 1; i <= n; i++) {
+//         let res2 = [];
+//         for (let j = 0; j < i; j++) {
+//             res2.push(1);
+//         }
+//         res.push(res2)
+//     }
+//     return res
+//     // your code here
+// }
+//
+// console.log(pyramid(3)) //[[1], [1, 1], [1, 1, 1]]
+
+// Задача: Переворот массива
+// Напишите рекурсивную функцию, которая переворачивает массив. Функция должна принимать массив и возвращать новый массив, в котором элементы расположены в обратном порядке.
+//
+//     Условия задачи:
+//     Функция должна принимать один аргумент — массив.
+//     Если массив пустой, функция должна вернуть пустой массив.
+//     В противном случае, функция должна вернуть новый массив, в котором первый элемент исходного массива становится последним, второй элемент — предпоследним и так далее.
+//     Пример использования:
+//     javascript
+//
+// Копировать код
+// console.log(reverseArray([1, 2, 3, 4, 5])); // [5, 4, 3, 2, 1]
+// console.log(reverseArray(['a', 'b', 'c'])); // ['c', 'b', 'a']
+// console.log(reverseArray([])); // []
+// Попробуйте реализовать эту задачу!
+
+function reverseArray(arr) {
+    if (arr.length === 0) {
+        return []
     }
-    for (let i = 1; i <= n; i++) {
-        let res2 = [];
-        for (let j = 0; j < i; j++) {
-            res2.push(1);
-        }
-        res.push(res2)
-    }
-    return res
-    // your code here
+    return [arr.pop()].concat(reverseArray(arr))
 }
 
-console.log(pyramid(3)) //[[1], [1, 1], [1, 1, 1]]
+let c = reverseArray([1, 2, 3, 4, 5])
+console.log(c)

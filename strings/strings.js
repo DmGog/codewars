@@ -168,6 +168,7 @@ console.log(reverse("Reverse this string, please!"))*/
 console.log(toWeirdCase("UPPER CASE")) //UpPeR CaSe*/
 
 // Title Case  https://www.codewars.com/kata/5202ef17a402dd033c000009/train/javascript
+/*
 function titleCase(title, minorWords) {
     let res1 = title.toLowerCase().split(" ");
     let res2 = minorWords ? minorWords.toLowerCase().split(" ") : [];
@@ -180,4 +181,22 @@ function titleCase(title, minorWords) {
     return res1.join(" ");
 }
 
-console.log(titleCase("a clash of KINGS", "a an the of")) //'A Clash of Kings'
+console.log(titleCase("a clash of KINGS", "a an the of")) //'A Clash of Kings'*/
+
+
+function defineSuit(card) {
+    // good luck
+    let res = card.split("")
+    switch (res[res.length-1]) {
+        case "♣":
+            return "clubs"
+        case "♦":
+            return "diamonds"
+        case "♥":
+            return "hearts"
+        case "♠":
+            return "spades"
+    }
+}
+
+console.log(defineSuit("10♥"))
