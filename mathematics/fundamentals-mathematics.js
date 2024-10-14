@@ -210,6 +210,7 @@ console.log(remainder(13, 72))*/
 // Are they the "same" ? https ://www.codewars.com/kata/550498447451fbbd7600041c/train/javascript
 
 
+/*
 function comp(array1, array2) {
     //your code here
     if (array1 === null || array2 === null) return false
@@ -221,4 +222,16 @@ function comp(array1, array2) {
 }
 
 console.log(comp([121, 144, 19, 161, 19, 144, 19, 11],
-    [121, 14641, 20736, 361, 25921, 361, 20736, 361]))
+    [121, 14641, 20736, 361, 25921, 361, 20736, 361]))*/
+
+/*
+function pillars(numPill, dist, width) {
+    // your code here
+    if (numPill < 2) return 0
+    if (numPill === 2) return dist * 100
+    const distSm = dist * 100
+    if (numPill >= 3) return distSm * (numPill - 1) + width * (numPill - 2)
+
+}
+
+console.log(pillars(11, 15, 30))*/
