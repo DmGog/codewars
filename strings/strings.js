@@ -206,6 +206,7 @@ console.log(defineSuit("10♥"))*/
 // Consonant value https://www.codewars.com/kata/59c633e7dcc4053512000073/train/javascript
 
 
+/*
 function solve(s) {
     let maxSum = 0;
     let currentSum = 0;
@@ -230,4 +231,20 @@ function solve(s) {
     return maxSum;
 };
 
-console.log(solve("zodiac"))
+console.log(solve("zodiac"))*/
+
+// Is there a vowel in there?  https://www.codewars.com/kata/57cff961eca260b71900008f/train/javascript
+
+function isVow(a) {
+    let c = "aeiou"
+    let res2 = a.map(e => {
+        // Преобразуем число в символ
+        let char = String.fromCharCode(e);
+        // Проверяем, является ли символ гласной
+        return c.includes(char) ? char : e; // Если гласная, возвращаем её, иначе возвращаем число
+    });
+    return res2;
+
+}
+
+console.log(isVow([118, 117, 120, 121, 117, 98, 122, 97, 120, 106, 104, 116, 113, 114, 113, 120, 106]))
