@@ -184,6 +184,7 @@ function titleCase(title, minorWords) {
 console.log(titleCase("a clash of KINGS", "a an the of")) //'A Clash of Kings'*/
 
 
+/*
 function defineSuit(card) {
     // good luck
     let res = card.split("")
@@ -199,4 +200,34 @@ function defineSuit(card) {
     }
 }
 
-console.log(defineSuit("10♥"))
+console.log(defineSuit("10♥"))*/
+
+
+// Consonant value https://www.codewars.com/kata/59c633e7dcc4053512000073/train/javascript
+
+
+function solve(s) {
+    let maxSum = 0;
+    let currentSum = 0;
+
+    for (let i = 0; i < s.length; i++) {
+        const char = s[i];
+        const position = char.charCodeAt(0) - 'a'.charCodeAt(0) + 1;
+
+        // Проверяем, является ли символ согласной
+        if (!'aeiou'.includes(char)) {
+            currentSum += position; // Добавляем значение согласной к текущей сумме
+        } else {
+            // Если символ гласный, сравниваем и сбрасываем текущую сумму
+            maxSum = Math.max(maxSum, currentSum);
+            currentSum = 0; // Сбрасываем текущую сумму
+        }
+    }
+
+    // Сравниваем в конце, если строка заканчивается на согласную
+    maxSum = Math.max(maxSum, currentSum);
+
+    return maxSum;
+};
+
+console.log(solve("zodiac"))
