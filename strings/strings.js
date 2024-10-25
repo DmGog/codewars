@@ -235,6 +235,7 @@ console.log(solve("zodiac"))*/
 
 // Is there a vowel in there?  https://www.codewars.com/kata/57cff961eca260b71900008f/train/javascript
 
+/*
 function isVow(a) {
     let c = "aeiou"
     let res2 = a.map(e => {
@@ -247,4 +248,16 @@ function isVow(a) {
 
 }
 
-console.log(isVow([118, 117, 120, 121, 117, 98, 122, 97, 120, 106, 104, 116, 113, 114, 113, 120, 106]))
+console.log(isVow([118, 117, 120, 121, 117, 98, 122, 97, 120, 106, 104, 116, 113, 114, 113, 120, 106]))*/
+
+// Contamination #1 -String- https://www.codewars.com/kata/596fba44963025c878000039/train/javascript
+
+function contamination(text, char) {
+    const res = []
+    for (let i = 0; i < text.length; i++) {
+        res.push(char)
+    }
+    return res.join("")
+}
+
+console.log(contamination("_3ebzgh4","&"))
