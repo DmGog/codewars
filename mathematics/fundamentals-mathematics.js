@@ -244,3 +244,86 @@ console.log(pillars(11, 15, 30))*/
 // }
 //
 // console.log(multiply(10))
+
+// Calculating with Functions https://www.codewars.com/kata/525f3eda17c7cd9f9e000b39/train/javascript
+
+/*
+function zero(b) {
+    if (b) return b(0);
+    return 0;
+}
+
+function one(b) {
+    if (b) return b(1);
+    return 1;
+}
+
+function two(b) {
+    if (b) return b(2);
+    return 2;
+}
+
+function three(b) {
+    if (b) return b(3);
+    return 3;
+}
+
+function four(b) {
+    if (b) return b(4);
+    return 4;
+}
+
+function five(b) {
+    if (b) return b(5);
+    return 5;
+}
+
+function six(b) {
+    if (b) return b(6);
+    return 6;
+}
+
+function seven(b) {
+    if (b) return b(7);
+    return 7;
+}
+
+function eight(b) {
+    if (b) return b(8);
+    return 8;
+}
+
+function nine(b) {
+    if (b) return b(9);
+    return 9;
+}
+
+function plus(a) {
+    return function (b) {
+        return a + b;
+    };
+}
+
+function minus(a) {
+    return function (b) {
+        return b - a;
+    }
+}
+
+function times(a) {
+    return function (b) {
+        return a * b;
+    };
+}
+
+function dividedBy(a) {
+    return function (b) {
+        return Math.floor(b / a);
+    };
+}
+
+console.log(seven(times(five())))
+console.log(four(plus(nine())))
+console.log(eight(minus(three())))
+console.log(six(dividedBy(two())))
+*/
