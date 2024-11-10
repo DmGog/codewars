@@ -60,3 +60,35 @@
 // console.log(arr1.__proto__ === Array.prototype)
 // console.log(arr2.__proto__ === Array.prototype)
 // console.log(Object.__proto__ === Function.prototype);
+
+
+// есть id user , делаем запрос по id и получаем данные юзера. ( Имя , друзья). Делаем запрос другу и получаем его друзей. и тд ..
+
+
+const fetchUser = () => {
+    console.log("Fetching user...");
+    setTimeout(() => {
+        const user = {
+            id: 1, name: "John", friend: [{
+                id: 2, name: "Petr", friend: "Sveta"
+            }, {
+                id: 3, name: "Vera", friend: "Kirill"
+            }]
+        }
+        console.log(user)
+
+        setTimeout(() => {
+            const petr = user.friend.find(user => user.name === "Petr")
+
+            console.log(petr)
+
+            setTimeout(() => {
+                const sveta = petr.friend
+                console.log(sveta)
+            }, 2000)
+
+        }, 2000)
+
+    }, 2000)
+}
+console.log(fetchUser())

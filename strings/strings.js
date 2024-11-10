@@ -252,6 +252,7 @@ console.log(isVow([118, 117, 120, 121, 117, 98, 122, 97, 120, 106, 104, 116, 113
 
 // Contamination #1 -String- https://www.codewars.com/kata/596fba44963025c878000039/train/javascript
 
+/*
 function contamination(text, char) {
     const res = []
     for (let i = 0; i < text.length; i++) {
@@ -260,4 +261,14 @@ function contamination(text, char) {
     return res.join("")
 }
 
-console.log(contamination("_3ebzgh4","&"))
+console.log(contamination("_3ebzgh4","&"))*/
+
+
+// USD => CNY https://www.codewars.com/kata/5977618080ef220766000022/train/javascript
+
+/*
+    function usdcny(usd) {
+        return `${(usd*6.75).toFixed(2)} Chinese Yuan`
+    }
+
+console.log(usdcny(15))*/
