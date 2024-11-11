@@ -353,3 +353,40 @@ const sequenceSum = (begin, end, step) => {
 };
 
 console.log(sequenceSum(2, 2, 2))*/
+
+/*
+const pattern = "+7 (XXX) - XX - XX"
+const str = "1234567"
+
+function mask(str, pattern) {
+    let maskString = pattern
+    for (let i = 0; i < str.length; i++) {
+        maskString = maskString.replace("X", str[i])
+    }
+    return maskString
+}
+
+console.log(mask(str, pattern))*/
+
+
+/*function delay(ms) {
+   return  new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve()
+        }, ms)
+    })
+}*/
+const str = "Denchik"
+
+function speedDen(str, n = 0) {
+
+    if (n < str.length) {
+        console.log(str[n]);
+        setTimeout(() => {
+            speedDen(str, n + 1);
+        }, 1000);
+    }
+
+}
+
+speedDen(str)
