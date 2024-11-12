@@ -326,3 +326,59 @@ function revrot(str, sz) {
 }
 
 console.log(revrot("123456987654", 6))*/
+
+/*
+function print(n) {
+    let step = 0
+    while (step <= n) {
+        console.log("#".repeat(step))
+        step++
+    }
+}
+
+print(7)
+*/
+
+
+// First non-repeating character https://www.codewars.com/kata/52bc74d4ac05d0945d00054e/train/javascript
+
+function firstNonRepeatingLetter(s) {
+
+    let arr = s.split("");
+
+    for (let i = 0; i < arr.length; i++) {
+        let newArr = arr.filter(e => e.toLowerCase() === arr[i].toLowerCase());
+
+        if (newArr.length === 1) {
+
+            return arr[i];
+        }
+    }
+
+    return ''
+
+}
+
+console.log(firstNonRepeatingLetter("stress"))
+
+/*
+function firstNon(s) {
+    const lowerStr = s.toLowerCase()
+    const res = {}
+    let pos = 0
+    for (let i of lowerStr) {
+        if (!res[i]) {
+            res[i] = [1, pos]
+            pos++
+        } else {
+            res[i] = [res[i][0] + 1, pos]
+            pos++
+        }
+    }
+    const resultIndex = Object.entries(res)
+        .filter((el) => el[1][0] === 1)
+        .sort((a, b) => a[1][1] - b[1][1])
+    return s[resultIndex[0][1][1]]
+}
+
+console.log(firstNon(""))*/

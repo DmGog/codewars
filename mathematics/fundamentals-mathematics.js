@@ -376,6 +376,7 @@ console.log(mask(str, pattern))*/
         }, ms)
     })
 }*/
+/*
 const str = "Denchik"
 
 function speedDen(str, n = 0) {
@@ -389,4 +390,9 @@ function speedDen(str, n = 0) {
 
 }
 
-speedDen(str)
+speedDen(str)*/
+
+/*
+for (let j = 1; j <= 7; j++) {
+    console.log('#'.repeat(j));
+}*/
