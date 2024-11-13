@@ -227,6 +227,7 @@ Invalid arrays
     [1, 2, 33] is invalid because 33 is not a single-digit integer  https://www.codewars.com/kata/5514e5b77e6b2f38e0000ca9/train/javascript*/
 
 
+/*
 function upArray(arr) {
     if (arr.length === 0) {
         return 0
@@ -247,4 +248,33 @@ function upArray(arr) {
     return 0
 }
 
-console.log(upArray([0, 8]))
+console.log(upArray([0, 8]))*/
+
+// Array Helpers https://www.codewars.com/kata/525d50d2037b7acd6e000534
+
+/*
+Array.prototype.square = function() {
+    return this.map(x => x * x);
+};
+
+Array.prototype.cube = function() {
+    return this.map(x => x * x * x);
+};
+
+Array.prototype.average = function() {
+    if (this.length === 0) return NaN;
+    const sum = this.reduce((acc, val) => acc + val, 0);
+    return sum / this.length;
+};
+
+Array.prototype.sum = function() {
+    return this.reduce((acc, val) => acc + val, 0);
+};
+
+Array.prototype.even = function() {
+    return this.filter(x => x % 2 === 0);
+};
+
+Array.prototype.odd = function() {
+    return this.filter(x => x % 2 !== 0);
+};*/
