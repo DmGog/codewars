@@ -278,3 +278,20 @@ Array.prototype.even = function() {
 Array.prototype.odd = function() {
     return this.filter(x => x % 2 !== 0);
 };*/
+
+
+// function whoIsPaying(name){
+//     //your code here
+//     return name.length > 2 ? [name, name.slice(0, 2)] : [name]
+// }
+//
+// console.log(whoIsPaying("Me"))
+
+let n = 10
+next:
+    for (let i = 2; i <= n; i++) {
+    for (let j = 2; j < i; j++) {
+        if (i % j === 0) continue next;
+    }
+    console.log(i)
+}

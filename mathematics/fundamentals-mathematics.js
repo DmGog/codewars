@@ -396,3 +396,14 @@ speedDen(str)*/
 for (let j = 1; j <= 7; j++) {
     console.log('#'.repeat(j));
 }*/
+
+
+// function factorial(n) {
+//     if (n === 1) {
+//         return 1
+//     }
+//     return n * factorial(n - 1)
+// }
+//
+// console.log(factorial(5))
+// add the value "codewars" to the websites array 1,000 times
