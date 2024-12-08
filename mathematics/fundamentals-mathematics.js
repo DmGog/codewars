@@ -407,3 +407,229 @@ for (let j = 1; j <= 7; j++) {
 //
 // console.log(factorial(5))
 // add the value "codewars" to the websites array 1,000 times
+
+
+// let salaries = {
+//     John: 100,
+//     Ann: 160,
+//     Pete: 130
+// }
+// let sum = 0
+//
+// for (let key in salaries){
+//     sum += salaries[key]
+// }
+// console.log(sum)
+
+// let menu = {
+//     width: 200,
+//     height: 300,
+//     title: "My menu"
+// };
+//
+// function multiplyNumeric(obj) {
+//     for (let key in obj) {
+//         if (typeof obj[key] === 'number') {
+//             obj[key] *= 2;
+//         }
+//     }
+// }
+// multiplyNumeric(menu)
+// console.log(menu);
+
+// let result = "1234"
+// let arrResult = Array.from(result)
+// console.log(arrResult)
+
+// let obj1 = {
+//     name: "petr",
+//     location: {
+//         country: {
+//             country: "russia",
+//             city: {
+//                 city: "ivanovo",
+//             }
+//         }
+//     }
+// }
+//
+// let obj2 = structuredClone(obj1)
+// obj2.location.country.city.city = "volini"
+// console.log(obj2)
+// console.log(obj1.location.country.city.city)
+
+// function Accumulator (value){
+//     this.value = value
+//     this.read = function (){
+//         this.value += +prompt("value",0)
+//     }
+// }
+//
+// let accumulator = new Accumulator(1); // начальное значение 1
+//
+// accumulator.read(); // прибавляет введённое пользователем значение к текущему значению
+// accumulator.read(); // прибавляет введённое пользователем значение к текущему значению
+//
+// alert(accumulator.value); // выведет сумму этих значений
+
+
+// let user = {
+//     name: "Вася"
+// };
+//
+// let id = Symbol.for("id");
+// let id1 = Symbol("you")
+//
+//
+// let id3 = Symbol.for("id");
+// user[id] = 1;
+// user[id1] = 1;
+//
+// console.log(id3===id)
+
+// function ucFirst(str){
+//     return str[0].toUpperCase()+str.slice(1);
+// }
+//
+// console.log(ucFirst("вася") == "Вася");
+
+// function checkSpam(str) {
+//     if (!str) return
+//     return str.toLowerCase().includes("viagra") || str.toUpperCase().includes("XXX")
+//
+// }
+//
+// console.log(checkSpam("buy xxx now") == true)
+
+// function extractCurrencyValue(str){
+//     return +str.slice(1)
+// }
+//
+// console.log(extractCurrencyValue('$120'))
+
+
+// function camelize(str) {
+//     let res = str.split("-").map((e, index) => index === 0 ? e : e[0].toUpperCase() + e.slice(1).toLowerCase()).join("");
+//     console.log(res)
+// }
+//
+// camelize("background-color")
+// camelize("list-style-image")
+// camelize("-webkit-transition")
+
+// let arr = [5, 3, 8, 1];
+//
+// function filterRange(arr, a,b){
+//     return arr.filter(e=> e>=a && e<=b);
+// }
+//
+// let filtered = filterRange(arr, 1, 4);
+// console.log(filtered)
+// console.log(arr)
+
+
+// let arr = [5, 3, 8, 1];
+//
+// function filterRangeInPlace(arr, a, b) {
+//   for (let i = 0; i < arr.length; i++) {
+//       let res = arr[i];
+//       if(res < a || res > b) {
+//           arr.splice(i, 1);
+//           i--
+//       }
+//   }
+// }
+//
+// console.log(filterRangeInPlace(arr, 1, 4)); // удалены числа вне диапазона 1..4
+//
+// console.log(arr); // [3, 1]
+//
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 28 };
+//
+// let users = [ vasya, petya, masha ];
+//
+//
+//
+// let names = users.map(e => e.name);
+//
+// console.log( names ); // Вася, Петя, Маша
+
+
+// let vasya = {name: "Вася", surname: "Пупкин", id: 1};
+// let petya = {name: "Петя", surname: "Иванов", id: 2};
+// let masha = {name: "Маша", surname: "Петрова", id: 3};
+//
+// let users = [vasya, petya, masha];
+//
+// let usersMapped = users.map(user => ({
+//     fullName: (user.name + user.surname), id:user.id
+// }))
+
+/*
+usersMapped = [
+  { fullName: "Вася Пупкин", id: 1 },
+  { fullName: "Петя Иванов", id: 2 },
+  { fullName: "Маша Петрова", id: 3 }
+]
+*/
+
+// console.log(usersMapped[0].id) // 1
+// console.log(usersMapped[0].fullName) // Вася Пупкин
+
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 28 };
+//
+// let arr = [ vasya, petya, masha ];
+// function sortByAge(arr){
+//     arr.sort((a,b) => a.age - b.age);
+// }
+// sortByAge(arr);
+//
+// // теперь: [vasya, masha, petya]
+// console.log(arr[0].name); // Вася
+// console.log(arr[1].name); // Маша
+// console.log(arr[2].name); // Петя
+
+// function unique(arr) {
+//     let res = []
+//     for (let item of arr) {
+//         if (!res.includes(item)) {
+//             res.push(item)
+//         }
+//     }
+//     return res
+// }
+//
+// let strings = ["кришна", "кришна", "харе", "харе",
+//     "харе", "харе", "кришна", "кришна", ":-O"
+// ];
+//
+// console.log(unique(strings)); // кришна, харе, :-O
+
+// let users = [
+//     {id: 'john', name: "John Smith", age: 20},
+//     {id: 'ann', name: "Ann Smith", age: 24},
+//     {id: 'pete', name: "Pete Peterson", age: 31},
+// ];
+
+// function groupById(arr){
+//    return  arr.reduce((a,c)=>{
+//      a[c.id] = c
+//        return a
+//     },{})
+// }
+//
+// let usersById = groupById(users);
+// console.log(usersById)
+/*
+после вызова у нас должно получиться:
+
+usersById = {
+  john: {id: 'john', name: "John Smith", age: 20},
+  ann: {id: 'ann', name: "Ann Smith", age: 24},
+  pete: {id: 'pete', name: "Pete Peterson", age: 31},
+}
+*/
