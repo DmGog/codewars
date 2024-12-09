@@ -400,54 +400,66 @@ Uruk Hai: 3
 Trolls: 5
 Wizards: 10*/
 
-function goodVsEvil(good, evil) {
-    const goodObj = {
-        Hobbits: 1,
-        Men: 2,
-        Elves: 3,
-        Dwarves: 3,
-        Eagles: 4,
-        Wizards: 10,
-    }
+// function goodVsEvil(good, evil) {
+//     const goodObj = {
+//         Hobbits: 1,
+//         Men: 2,
+//         Elves: 3,
+//         Dwarves: 3,
+//         Eagles: 4,
+//         Wizards: 10,
+//     }
+//
+//     const evilObj = {
+//         Orcs: 1,
+//         Men: 2,
+//         Wargs: 2,
+//         Goblins: 2,
+//         UrukHai: 3,
+//         Trolls: 5,
+//         Wizards: 10,
+//     }
+//     let goodArr = good.split(" ")
+//     let evilArr = evil.split(" ")
+//     let i = 0
+//     let j = 0
+//     let sumGood = 0
+//     let sumEvil = 0
+//     for (let key in goodObj) {
+//             sumGood += goodObj[key] * goodArr[i]
+//             i++
+//     }
+//     for (let key in evilObj) {
+//             sumEvil += evilObj[key] * evilArr[j]
+//             j++
+//     }
+//
+//     if (sumGood > sumEvil) {
+//         return "Battle Result: Good triumphs over Evil"
+//     }
+//     if (sumGood < sumEvil) {
+//         return "Battle Result: Evil eradicates all trace of Good"
+//     }
+//     if (sumGood === sumEvil) {
+//         return "Battle Result: No victor on this battle field"
+//     }
+// }
+//
+//
+// console.log(goodVsEvil("1 1 1 1 1 1", "1 1 1 1 1 1 1"))
 
-    const evilObj = {
-        Orcs: 1,
-        Men: 2,
-        Wargs: 2,
-        Goblins: 2,
-        UrukHai: 3,
-        Trolls: 5,
-        Wizards: 10,
-    }
-    let goodArr = good.split(" ")
-    let evilArr = evil.split(" ")
-    let i = 0
-    let j = 0
-    let sumGood = 0
-    let sumEvil = 0
-    for (let key in goodObj) {
-        if (i < goodArr.length) {
-            sumGood += goodObj[key] * goodArr[i]
-            i++
-        }
-    }
-    for (let key in evilObj) {
-        if (j < evilArr.length) {
-            sumEvil += evilObj[key] * evilArr[j]
-            j++
-        }
-    }
 
-    if (sumGood > sumEvil) {
-        return "Battle Result: Good triumphs over Evil"
-    }
-    if (sumGood < sumEvil) {
-        return "Battle Result: Evil eradicates all trace of Good"
-    }
-    if (sumGood === sumEvil) {
-        return "Battle Result: No victor on this battle field"
-    }
-}
-
-
-console.log(goodVsEvil("1 1 1 1 1 1", "1 1 1 1 1 1 1"))
+// Backspaces in string https://www.codewars.com/kata/5727bb0fe81185ae62000ae3/train/javascript
+// function cleanString(s) {
+//     let res = []
+//     for (let el of s) {
+//         if (el === "#") {
+//             res.pop()
+//         } else {
+//             res.push(el)
+//         }
+//     }
+//     return res.join("")
+// }
+//
+// console.log(cleanString("abc#d##c"))
