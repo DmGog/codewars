@@ -633,3 +633,56 @@ usersById = {
   pete: {id: 'pete', name: "Pete Peterson", age: 31},
 }
 */
+
+// Persistent Bugger. https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec/train/javascript
+// function persistence(num) {
+//     if (num < 10) return 0
+//     let sum = 1
+//     let res = num.toString().split("").reduce((a, b) => a * b)
+//     while (res>=10){
+//         sum+=1
+//         res = res.toString().split("").reduce((a, b) => a * b)
+//     }
+//     return sum
+// }
+//
+// console.log(persistence(25))
+
+
+// function calculator(a, b, sign) {
+//     if (typeof a !== "number" || typeof b !== "number") return "unknown value"
+//         switch (sign) {
+//             case "*":
+//                 return a * b
+//             case "+":
+//                 return a + b
+//             case "-":
+//                 return a - b
+//             case "/":
+//                 return a / b
+//             default:
+//                 return "unknown value"
+//         }
+// }
+//
+// console.log(calculator("1we", 2, "+"))
+
+// function unique(arr) {
+//     let res = Array.from(new Set (arr))
+//     return res
+// }
+//
+// let values = ["Hare", "Krishna", "Hare", "Krishna",
+//     "Krishna", "Krishna", "Hare", "Hare", ":-O"
+// ];
+//
+// console.log( unique(values) ); // Hare,Krishna,:-O
+
+// let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+// function aclean(arr){
+//     let res = arr.map(e=>e.toLowerCase().split("").sort().join(""))
+//     let res2 = Array.from(new Set(res)).join(",")
+//     return res2
+// }
+//
+// console.log( aclean(arr) ); // "nap,teachers,ear" или "PAN,cheaters,era"

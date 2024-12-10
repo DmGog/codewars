@@ -287,11 +287,69 @@ Array.prototype.odd = function() {
 //
 // console.log(whoIsPaying("Me"))
 
-let n = 10
-next:
-    for (let i = 2; i <= n; i++) {
-    for (let j = 2; j < i; j++) {
-        if (i % j === 0) continue next;
-    }
-    console.log(i)
-}
+// let n = 10
+// next:
+//     for (let i = 2; i <= n; i++) {
+//     for (let j = 2; j < i; j++) {
+//         if (i % j === 0) continue next;
+//     }
+//     console.log(i)
+// }
+
+// Snail Sort https://www.codewars.com/kata/521c2db8ddc89b9b7a0000c1/train/javascript
+
+
+// function snail(array) {
+//     let res = [];
+//     if (array.length === 0) return res;
+//
+//     let top = 0;
+//     let bottom = array.length - 1;
+//     let left = 0;
+//     let right = array[0].length - 1;
+//
+//     while (top <= bottom && left <= right) {
+//         for (let i = left; i <= right; i++) {
+//             res.push(array[top][i]);
+//         }
+//         top++;
+//
+//         for (let i = top; i <= bottom; i++) {
+//             res.push(array[i][right]);
+//         }
+//         right--;
+//
+//         if (top <= bottom) {
+//             for (let i = right; i >= left; i--) {
+//                 res.push(array[bottom][i]);
+//             }
+//             bottom--;
+//         }
+//
+//         if (left <= right) {
+//             for (let i = bottom; i >= top; i--) {
+//                 res.push(array[i][left]);
+//             }
+//             left++;
+//         }
+//     }
+//
+//     return res;
+// }
+
+// const snail = function(array) {
+//     const list = [];
+//
+//     while(array.length) {
+//         list.push(...array.shift(), ...array.map(row => row.pop()));
+//
+//         array.reverse().map(row => row.reverse());
+//     }
+//
+//     return list;
+// }
+// console.log(snail)([
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9]
+// ]) //[1,2,3,6,9,8,7,4,5]
