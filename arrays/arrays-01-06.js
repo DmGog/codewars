@@ -353,3 +353,21 @@ Array.prototype.odd = function() {
 //     [4, 5, 6],
 //     [7, 8, 9]
 // ]) //[1,2,3,6,9,8,7,4,5]
+
+
+// Delete occurrences of an element if it occurs more than n times https://www.codewars.com/kata/554ca54ffa7d91b236000023/train/javascript
+
+// function deleteNth(arr, n) {
+//     let res = []
+//
+//     for (let i = 0; i < arr.length; i++) {
+//         let res2 = res.filter(e => e === arr[i])
+//         if (res2.length < n) {
+//             res.push(arr[i])
+//         }
+//     }
+//     return res
+// }
+//
+// console.log(deleteNth([20, 37, 20, 21], 1))
+
