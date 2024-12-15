@@ -359,7 +359,6 @@ Array.prototype.odd = function() {
 
 // function deleteNth(arr, n) {
 //     let res = []
-//
 //     for (let i = 0; i < arr.length; i++) {
 //         let res2 = res.filter(e => e === arr[i])
 //         if (res2.length < n) {
@@ -374,17 +373,17 @@ Array.prototype.odd = function() {
 
 // Tribonacci Sequence https://www.codewars.com/kata/556deca17c58da83c00002db/train/javascript
 
-function tribonacci(signature, n) {
-    if (n === 0) return []
-    let res = []
-    for (let i = 0; i < n; i++) {
-        if (!signature[i]) {
-            res.push(res[i - 3] + res[i - 2] + res[i - 1]);
-        } else {
-            res.push(signature[i])
-        }
-    }
-    return res
-}
-
-console.log(tribonacci([1, 1, 1], 10))
+// function tribonacci(signature, n) {
+//     if (n === 0) return []
+//     let res = []
+//     for (let i = 0; i < n; i++) {
+//         if (!signature[i]) {
+//             res.push(res[i - 3] + res[i - 2] + res[i - 1]);
+//         } else {
+//             res.push(signature[i])
+//         }
+//     }
+//     return res
+// }
+//
+// console.log(tribonacci([1, 1, 1], 10))
