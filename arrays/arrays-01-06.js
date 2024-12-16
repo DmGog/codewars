@@ -387,3 +387,21 @@ Array.prototype.odd = function() {
 // }
 //
 // console.log(tribonacci([1, 1, 1], 10))
+
+
+// Consecutive strings https://www.codewars.com/kata/56a5d994ac971f1ac500003e/train/javascript
+
+// function longestConsec(strarr, k) {
+//     if (k <= 0 || k >= strarr.length) return ""
+//     let res = []
+//
+//     for (let i = 0; i < strarr.length; i++) {
+//         let string = [...strarr].splice(i, k).reduce((a, b) => a + b)
+//         res.push(string)
+//     }
+//     let res2 = Math.max(...res.map(e => e.length))
+//     let res3 = res.filter(e => e.length === res2)
+//     return res3[0]
+// }
+//
+// console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2))
