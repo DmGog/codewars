@@ -408,14 +408,26 @@ Array.prototype.odd = function() {
 
 // Find the missing term in an Arithmetic Progression https://www.codewars.com/kata/52de553ebb55d1fca3000371/train/javascript
 
-var findMissing = function (list) {
+// var findMissing = function (list) {
+//
+//     let num = (list[list.length - 1] - list[0]) / list.length;
+//     for (let i = 0; i < list.length - 1; i++) {
+//         if (list[i + 1] - list[i] !== num) {
+//             return list[i] + num;
+//         }
+//     }
+// }
+//
+// console.log(findMissing([1,2,3,5]))
 
-    let num = (list[list.length - 1] - list[0]) / list.length;
-    for (let i = 0; i < list.length - 1; i++) {
-        if (list[i + 1] - list[i] !== num) {
-            return list[i] + num;
-        }
+
+// Data Reverse https://www.codewars.com/kata/569d488d61b812a0f7000015/train/javascript
+function dataReverse(data) {
+    let res = []
+    for (let i = 0; i < data.length; i = i+8) {
+        res.push(data.slice(i, i+8))
     }
+    return res.reverse().flat()
 }
 
-console.log(findMissing([1,2,3,5]))
+console.log(dataReverse([1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,1,0]))
