@@ -431,3 +431,61 @@ Array.prototype.odd = function() {
 // }
 //
 // console.log(dataReverse([1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,1,0]))
+
+
+// Same Array? https://www.codewars.com/kata/558c04ecda7fb8f48b000075/train/javascript
+
+/*
+function same(aArr, bArr) {
+    if (aArr.flat().length < 1 && bArr.flat().length < 1) {
+        return true;
+    }
+    if (aArr.flat().length < 1 || bArr.flat().length < 1) {
+        return false;
+    }
+    const arr1 = aArr.map(elem => elem.reduce((a, b) => a + b)).sort((a, b) => a - b);
+    const arr2 = bArr.map(elem => elem.reduce((a, b) => a + b)).sort((a, b) => a - b);
+    let i = 0
+    while (arr1.length > i) {
+        if (arr1[i] !== arr2[i]) {
+            return false;
+        }
+        i++
+    }
+    return true;
+}
+
+console.log(same([[2,6,4]], [[2,6]]))*/
+
+// Help the bookseller ! https://www.codewars.com/kata/54dc6f5a224c26032800005c/train/javascript
+
+/*
+function stockList(books, categories) {
+    if (books.length === 0) {
+        return ""
+    }
+    const obj = books.map(e => e.split(" "))
+        .reduce((acc, [key, value]) => {
+            const firstLetter = key[0];
+            const numericValue = parseInt(value, 10);
+
+            if (acc[firstLetter]) {
+                acc[firstLetter] += numericValue;
+            } else {
+                acc[firstLetter] = numericValue;
+            }
+
+            return acc;
+        }, {});
+
+    const res = []
+    for (const el of categories) {
+        if (obj[el]) {
+            res.push(`(${el} : ${obj[el]})`);
+        } else res.push(`(${el} : 0)`);
+    }
+    return res.join(" - ");
+}
+
+console.log(stockList([],
+    ["A", "B", "C", "D"],))*/

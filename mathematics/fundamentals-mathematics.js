@@ -711,32 +711,43 @@ usersById = {
 
 // Roman Numerals Encoder https://www.codewars.com/kata/51b62bf6a9c58071c600001b/train/javascript
 
-function solution(num) {
-    const romanNumerals = [
-        { value: 1000, symbol: 'M' },
-        { value: 900, symbol: 'CM' },
-        { value: 500, symbol: 'D' },
-        { value: 400, symbol: 'CD' },
-        { value: 100, symbol: 'C' },
-        { value: 90, symbol: 'XC' },
-        { value: 50, symbol: 'L' },
-        { value: 40, symbol: 'XL' },
-        { value: 10, symbol: 'X' },
-        { value: 9, symbol: 'IX' },
-        { value: 5, symbol: 'V' },
-        { value: 4, symbol: 'IV' },
-        { value: 1, symbol: 'I' }
-    ];
+// function solution(num) {
+//     const romanNumerals = [
+//         { value: 1000, symbol: 'M' },
+//         { value: 900, symbol: 'CM' },
+//         { value: 500, symbol: 'D' },
+//         { value: 400, symbol: 'CD' },
+//         { value: 100, symbol: 'C' },
+//         { value: 90, symbol: 'XC' },
+//         { value: 50, symbol: 'L' },
+//         { value: 40, symbol: 'XL' },
+//         { value: 10, symbol: 'X' },
+//         { value: 9, symbol: 'IX' },
+//         { value: 5, symbol: 'V' },
+//         { value: 4, symbol: 'IV' },
+//         { value: 1, symbol: 'I' }
+//     ];
+//
+//     let result = '';
+//     for (const { value, symbol } of romanNumerals) {
+//         while (num >= value) {
+//             result += symbol;
+//             num -= value;
+//         }
+//     }
+//
+//     return result;
+// }
+//
+// console.log(solution(1990))
 
-    let result = '';
-    for (const { value, symbol } of romanNumerals) {
-        while (num >= value) {
-            result += symbol;
-            num -= value;
-        }
-    }
 
-    return result;
+// Find Nearest square number
+/*
+function nearestSq(n){
+    // your code
+
+    return (Math.round(Math.sqrt(n)))**2;
 }
 
-console.log(solution(1990))
+console.log(nearestSq(1))*/
