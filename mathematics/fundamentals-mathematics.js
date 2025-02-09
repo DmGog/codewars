@@ -751,3 +751,46 @@ function nearestSq(n){
 }
 
 console.log(nearestSq(1))*/
+
+/*function delay (n){
+    let promise = new Promise(
+        reject => setTimeout()
+        resolve => setTimeout(resolve, n*1000));
+    return promise;
+}
+
+delay(3).then(()=>{
+    console.log("привет")})*/
+
+/*
+function sum (n){
+    if (n==0) return 1
+
+    return n * sum(n-1)
+}
+
+console.log(sum(5))*/
+
+// https://www.codewars.com/kata/5626b561280a42ecc50000d1/train/javascript
+/*function sumDigPow(a, b) {
+    const arr = []
+    const arrRes = []
+    let i = a
+    while (i <= b) {
+        arr.push(i);
+        i++
+    }
+
+    for (let el of arr) {
+        let elArr = el.toString().split("").map((e, index) => e = Number(e) ** (index + 1)
+        )
+        if ((elArr.reduce((a, b) => a + b)) === el) {
+            arrRes.push(el)
+        }
+    }
+
+
+    return arrRes
+}
+
+console.log(sumDigPow(90, 100))*/

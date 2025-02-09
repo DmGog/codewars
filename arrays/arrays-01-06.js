@@ -489,3 +489,35 @@ function stockList(books, categories) {
 
 console.log(stockList([],
     ["A", "B", "C", "D"],))*/
+
+/*
+for (let i = 0; i < 10; i++) {
+    setTimeout(()=>{
+        console.log(i)
+    })
+}*/
+
+
+function getLengthOfMissingArray(arrayOfArrays) {
+    if (!arrayOfArrays || arrayOfArrays.length === 0) {
+        return 0;
+    }
+    let res = []
+    for (let el of arrayOfArrays) {
+        if (!el || el.length === 0) {
+            return 0;
+        } else {
+            res.push(el.length)
+        }
+    }
+    let resSort = res.sort((a,b) => a-b)
+    for (let i = 0; i < resSort.length - 1; i++) {
+        if (resSort[i + 1] !== resSort[i] + 1) {
+            return resSort[i] + 1;
+        }
+    }
+    return 0
+}
+
+
+console.log(getLengthOfMissingArray([null] ))
