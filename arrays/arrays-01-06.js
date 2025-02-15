@@ -498,7 +498,7 @@ for (let i = 0; i < 10; i++) {
 }*/
 
 
-function getLengthOfMissingArray(arrayOfArrays) {
+/*function getLengthOfMissingArray(arrayOfArrays) {
     if (!arrayOfArrays || arrayOfArrays.length === 0) {
         return 0;
     }
@@ -517,7 +517,42 @@ function getLengthOfMissingArray(arrayOfArrays) {
         }
     }
     return 0
+}*/
+
+
+// console.log(getLengthOfMissingArray([null] ))
+
+
+/*function parse(data) {
+
+    let parseNumber = 0;
+    let parseArray = []
+
+    for (let parseElement of data) {
+        switch (parseElement) {
+            case "i":
+                parseNumber = parseNumber + 1;
+                break
+            case "d":
+                parseNumber = parseNumber - 1;
+                break
+            case "s":
+                parseNumber = parseNumber ** 2;
+                break
+            case "o":
+                parseArray.push(parseNumber)
+                break
+            default:
+                break
+        }
+    }
+    return parseArray;
 }
 
+console.log(parse("iiisxxxdoso"));*/
 
-console.log(getLengthOfMissingArray([null] ))
+/*
+i: Увеличить значение
+d: Уменьшить значение
+s: Возвести значение в квадрат
+o: Вывод значения в массив результатов*/

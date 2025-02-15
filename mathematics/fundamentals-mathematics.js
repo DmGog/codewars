@@ -794,3 +794,19 @@ console.log(sum(5))*/
 }
 
 console.log(sumDigPow(90, 100))*/
+
+// http://codewars.com/kata/5502c9e7b3216ec63c0001aa/train/javascript
+/*
+function openOrSenior(data) {
+    const resArr = []
+    for (let el of data) {
+        if (el[0] >= 55 && el[1] > 7) {
+            resArr.push("Senior")
+        } else {
+            resArr.push("Open")
+        }
+    }
+    return resArr
+}
+
+console.log(openOrSenior([[45, 12], [55, 21], [19, -2], [104, 20]]), ["Open", "Senior", "Open", "Senior"])*/
