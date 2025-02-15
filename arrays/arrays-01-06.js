@@ -556,3 +556,26 @@ i: Увеличить значение
 d: Уменьшить значение
 s: Возвести значение в квадрат
 o: Вывод значения в массив результатов*/
+
+
+// http://codewars.com/kata/55466989aeecab5aac00003e/train/javascript
+
+/*
+function sqInRect(lng, wdth) {
+    if (lng === wdth) return null
+
+    let arr = []
+
+    while (lng > 0 && wdth > 0) {
+        let size = Math.min(lng, wdth)
+        arr.push(size)
+        if (lng > wdth) {
+            lng -= size
+        } else {
+            wdth -= size
+        }
+    }
+    return arr
+}
+
+console.log(sqInRect(5, 3))*/
