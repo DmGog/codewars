@@ -810,3 +810,24 @@ function openOrSenior(data) {
 }
 
 console.log(openOrSenior([[45, 12], [55, 21], [19, -2], [104, 20]]), ["Open", "Senior", "Open", "Senior"])*/
+
+// https://www.codewars.com/kata/55d5434f269c0c3f1b000058/train/javascript
+
+/*
+function tripledouble(num1, num2) {
+    const num1Str = num1.toString();
+    const num2Str = num2.toString();
+
+    for (let i = 0; i < 10; i++) {
+        const triple = `${i}${i}${i}`;
+        const double = `${i}${i}`;
+
+        if (num1Str.includes(triple) && num2Str.includes(double)) {
+            return 1;
+        }
+    }
+
+    return 0;
+}
+
+console.log(tripledouble(111000, 100))*/
