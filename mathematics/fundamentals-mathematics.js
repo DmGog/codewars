@@ -831,3 +831,14 @@ function tripledouble(num1, num2) {
 }
 
 console.log(tripledouble(111000, 100))*/
+
+/*
+function remove(string) {
+let str = string.split("")
+    while (str[str.length-1]==="!"){
+    str = str.slice(0,-1)
+    }
+        return str.join("")
+}
+
+console.log(remove("Hi! Hi!"))*/

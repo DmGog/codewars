@@ -37,16 +37,12 @@ console.log(addTwoPromises(promise1,promise2))*/
 
 const counter = createCounter(-2)
 console.log(  counter())
-console.log(  counter())
-console.log(  counter())*/
-
 
 /*
 const data = [
     {user: "Ivan", favorite: "Chair"},
     {user: "Ivan", favorite: "Table"},
     {user: "Anna", favorite: "Sofa"},
-    {user: "Ivan", favorite: "Lamp"},
     {user: "Anna", favorite: "Desk"},
 ];
 */
@@ -103,6 +99,18 @@ console.log(newObject3(data))*/
 // //   Anna: ['Sofa', 'Desk']
 // // }
 
+/*const getAllItems = (tree) => {
+    const result = [];
+    const traverse = (node) => {
+        result.push(node.id);
+        if (node.children) {
+            node.children.forEach(traverse);
+        }
+    };
+
+    traverse(tree);
+    return result;
+};*/
 
 /*
 Напишите функцию groupByCategory(products), которая вернёт объект, где ключами будут категории, а значениями массивы товаров в этих категориях.
@@ -154,6 +162,7 @@ console.log(groupByCategory(products))*/
     C: 1
 }*/
 
+
 /*
 const grades = [
     { student: "Alice", grade: "A" },
@@ -182,26 +191,25 @@ console.log(countGrades(grades))*/
     "2024-02-02": [102, 105],
     "2024-02-03": [104]
 }*/
- /*   const orders = [
-    { date: "2024-02-01", orderId: 101 },
-    { date: "2024-02-02", orderId: 102 },
-    { date: "2024-02-01", orderId: 103 },
-    { date: "2024-02-03", orderId: 104 },
-    { date: "2024-02-02", orderId: 105 }
+/*   const orders = [
+   { date: "2024-02-01", orderId: 101 },
+   { date: "2024-02-02", orderId: 102 },
+   { date: "2024-02-01", orderId: 103 },
+   { date: "2024-02-03", orderId: 104 },
+   { date: "2024-02-02", orderId: 105 }
 ];
 
-    const groupByDate = (orders)=>{
-        const resObj = orders.reduce((acc, order)=>{
-          if(!acc[order.date]) acc[order.date] = [];
-          acc[order.date].push(order.orderId);
-          return acc
-        }, {})
+   const groupByDate = (orders)=>{
+       const resObj = orders.reduce((acc, order)=>{
+         if(!acc[order.date]) acc[order.date] = [];
+         acc[order.date].push(order.orderId);
+         return acc
+       }, {})
 
-        return resObj;
-    }
+       return resObj;
+   }
 
 console.log(groupByDate(orders))*/
-
 
 
 /*
@@ -345,3 +353,16 @@ const countNodes = (tree)=>{
 }
 
 console.log(countNodes(tree))*/
+
+
+/*console.log("start")
+
+const fn = () => (new Promise((resolve, reject) => {
+    console.log(1)
+    resolve("success")
+}))
+console.log("middlle")
+fn().then(res=> console.log(res))
+
+console.log('end')*/
+
