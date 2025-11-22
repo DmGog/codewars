@@ -842,3 +842,23 @@ let str = string.split("")
 }
 
 console.log(remove("Hi! Hi!"))*/
+
+// function removeEveryOther(arr){
+//     return arr.filter(function(elem, index) {
+//         return index % 2 === 0;
+//     });
+// }
+
+// function capitalizeWord(word) {
+//
+//     return `${word[0].toUpperCase()}${word.slice(1)}`;
+// }
+
+// function disemvowel(str) {
+//     return str.split('').filter(s => !/^[aeiouAEIOU]$/.test(s)).join('');
+// }
+// function disemvowel(str) {
+//     return str.replace(/[aeiou]/gi, '');
+// }
+//
+// console.log(disemvowel('What are you, a communist?'))
